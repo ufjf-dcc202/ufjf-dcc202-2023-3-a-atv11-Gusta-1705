@@ -4,11 +4,11 @@ export function getLista(){
     return lista;
 }
 
-export function limparLista(){
+export function limpaLista(){
     lista.splice(0);
 }
 
-export function adicionarNaLista(novoItem){
+export function adicionaNaLista(novoItem){
     lista.push(novoItem);
 }
 

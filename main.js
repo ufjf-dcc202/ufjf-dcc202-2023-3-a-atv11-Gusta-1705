@@ -1,5 +1,5 @@
 // main.js 
-import { adicionarNaLista, getLista, limparLista } from "./lista.js";
+import { adicionaNaLista, getLista, limparLista, removeDaLista } from "./lista.js";
 
 // Passo 1 - Ache os elementos importantes
 const pEntrada = document.querySelector('#entrada');
@@ -13,8 +13,8 @@ btnAdicionar.addEventListener('click', criaElementosNaLista);
 atualizarItensDeLista();
 
 function criaElementosNaLista(){
-    const texto = pEntrada.textContent;
-    adicionarNaLista(texto);
+    const texto = pEntrada.textContent.trim();
+    adicionaNaLista(texto);
     atualizarItensDeLista();
     pEntrada.textContent="";
     pEntrada.focus();
@@ -32,7 +32,7 @@ function atualizarItensDeLista(){
         const item = lista[i];
         const li = document.createElement('li');
         li.textContent = item;
-        olSaida .appendChild(li);
+        olSaida.appendChild(li);
     }
 }
 
